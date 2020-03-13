@@ -49,7 +49,7 @@ _To use this module, add the following call to your code:_
 - **_Sample Code:_**
 
 ```tf
-module "vpc_internet_gateway" {
+module "vpc_nat_gateway" {
   source = "git::https://github.com/nitinda/terraform-module-aws-vpc-nat-gateway.git?ref=master"
 
   allocation_id = var.allocation_id
@@ -59,7 +59,23 @@ module "vpc_internet_gateway" {
     Project     = "POC"
   }
 }
+
 ```
+
+```tf
+module "vpc_nat_gateway" {
+  source = "git::https://github.com/nitinda/terraform-module-aws-vpc-nat-gateway.git?ref=master"
+
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.public.id
+  tags          = {
+    Environment = "prod"
+    Project     = "POC"
+  }
+}
+
+```
+
 
 ---
 
