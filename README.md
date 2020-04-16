@@ -82,11 +82,11 @@ module "vpc_nat_gateway" {
 
 _The variables required in order for the module to be successfully called from the deployment repository are the following:_
 
-|**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
-|:----|:----|-----:|:---:|
-| **_allocation\_id_** | _The Allocation ID of the Elastic <br/> IP address for the gateway_ | _string_ | **_Required_** |
-| **_subnet\_id_** | _The Subnet ID of the subnet <br/> in which to place the gateway._ | _string_ | **_Required_** |
-| **_tags_** | _A mapping of tags to assign to the resource_ | _map(string)_ | **_Required_** |
+|**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** | **_Default Value_** |
+|:----|:----|-----:|:---:|:---:|
+| **_allocation\_id_** | _The Allocation ID of the Elastic <br/> IP address for the gateway_ | _string_ | **_Required_** |  |
+| **_subnet\_id_** | _The Subnet ID of the subnet <br/> in which to place the gateway._ | _string_ | **_Required_** |  |
+| **_tags_** | _A mapping of tags to assign to the resource_ | _map(string)_ | **_Optional_** | **_{}_** |
 
 
 ---
